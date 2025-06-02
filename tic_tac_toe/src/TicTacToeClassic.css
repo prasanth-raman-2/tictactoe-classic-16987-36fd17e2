@@ -1,0 +1,104 @@
+:root {
+  --ttt-primary: #ffffff;
+  --ttt-secondary: #222222;
+  --ttt-accent: #4caf50;
+  --ttt-grid-size: 270px;
+}
+
+.ttt-main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  background: var(--ttt-primary);
+  border-radius: 15px;
+  box-shadow: 0 4px 24px rgba(34,34,34,0.06);
+  max-width: 340px;
+  margin: 48px auto;
+  padding: 32px 24px;
+}
+
+.ttt-msg {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--ttt-secondary);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.ttt-board {
+  display: grid;
+  grid-template-columns: repeat(3, 60px);
+  grid-template-rows: repeat(3, 60px);
+  gap: 12px;
+  margin-bottom: 24px;
+  justify-content: center;
+}
+
+.ttt-cell {
+  width: 60px;
+  height: 60px;
+  font-size: 2rem;
+  background: var(--ttt-secondary);
+  color: var(--ttt-primary);
+  border: 2px solid var(--ttt-accent);
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+.ttt-cell:disabled {
+  background: #bdbdbd;
+  color: #757575;
+  cursor: default;
+}
+
+.ttt-status-win {
+  color: var(--ttt-accent);
+  font-weight: bold;
+}
+
+.ttt-status-draw {
+  color: #ff9800;
+  font-weight: 500;
+}
+
+.ttt-status-turn {
+  color: var(--ttt-secondary);
+}
+
+.ttt-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.ttt-reset-btn {
+  background: var(--ttt-accent);
+  color: var(--ttt-primary);
+  border: none;
+  border-radius: 5px;
+  padding: 7px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 4px;
+  transition: background 0.2s;
+}
+.ttt-reset-btn:hover,
+.ttt-reset-btn:focus {
+  background: #338a3e;
+}
+
+.ttt-game-status {
+  color: var(--ttt-secondary);
+  font-size: 0.97rem;
+}
